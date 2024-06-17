@@ -1,0 +1,412 @@
+/* navbar.module.css */
+
+.navbar {
+    position: fixed;
+    margin-top: 20px;
+    top: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background: rgba(208, 208, 208, 0.614);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    border-radius: 50px;
+    margin-left: 2%;
+    border: 1px solid white;
+  }
+  
+  .logo {
+    margin-right: 10px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+  }
+  
+  .logo h1 {
+    font-weight: 900;
+  }
+  
+  .navOptions {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+  }
+  
+  .navOptions a {
+    color: black;
+  }
+  
+  .navOptions a:hover {
+    color: blue;
+  }
+  
+  .login {
+    background-color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+  }
+  
+  .login:hover{
+    background-color: transparent;
+  }
+
+  .login a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login a:hover{
+    color: black;
+  }
+
+  .signup {
+    background-color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+  }
+
+  .signup:hover{
+    background-color: transparent;
+    
+  }
+
+  
+  .signup a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .signup a:hover{
+    color: black;
+  }
+  
+  /* Scrolled state styles */
+  .navbar.scrolled {
+    padding: 0 2rem;
+    width: 30%;
+    display: flex;
+  }
+  
+  .navbar.scrolled .navLinks {
+    display: none;
+  }
+  
+  .navbar.scrolled .plusIcon {
+    display: block;
+  }
+  
+  .navbar.scrolled .navOptions {
+    display: none;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navLinks a {
+    color: black;
+  }
+  
+  .navLinks a:hover {
+    color: blue;
+  }
+  
+  .plusIcon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Expanded state styles */
+  .navbar.expanded {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar.expanded .navLinks {
+    display: flex;
+    gap: 2rem;
+    transition: all 1s ease-in-out;
+  }
+  
+  .navbar.expanded .navOptions {
+    display: flex;
+    transition: all 1s ease-in;
+  }
+  
+  .navbar.expanded .plusIcon {
+    display: none;
+  }
+  
+  .arrowDown {
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  
+  .arrowUp {
+    display: inline-block;
+    transform: rotate(-180deg);
+    transition: transform 0.3s;
+  }
+  
+  .dropdownContainer {
+    position: absolute;
+    margin-top: 100px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .dropdownproducts,
+  .dropdownAbout,
+  .dropdownServices {
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    min-width: 200px;
+  }
+  
+  /* Dropdown content styles */
+  .dropdownproducts {
+    color: blue;
+  }
+  
+  .dropdownAbout {
+    color: green;
+  }
+  
+  .dropdownServices {
+    color: red;
+  }
+  
+  .dropdownBusiness {
+    position: fixed;
+    background: rgba(208, 208, 208, 0.614);
+    backdrop-filter: blur(100px);
+    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
+    border: 1px solid white;
+  }
+  
+  .inner {
+    margin: 20px;
+    background-color: white;
+    display: flex;
+    border-radius: 30px;
+  }
+  
+  .inner h2 {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  
+  .dropdownBusiness img {
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+  }
+  
+  .business1,
+  .business2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .business1 p {
+    margin-top: 0;
+    font-size: 10px;
+    color: gray;
+    text-align: center;
+  }
+  
+  .business1 h2 {
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .business2 h2 {
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .business2 p {
+    margin-top: 0;
+    font-size: 10px;
+    color: gray;
+    text-align: center;
+  }
+  
+  .business1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 15px;
+  }
+  
+  .business1:hover {
+    background-color: initial;
+    background-image: linear-gradient(87deg, rgb(100, 116, 255) -15.34%, rgb(128, 120, 253) 21.77%, rgb(136, 119, 188) 83.94%);
+    color: white !important;
+  }
+  
+  .business1:hover p {
+    color: white;
+  }
+  
+  .business2:hover p {
+    color: white;
+  }
+  
+  .business1 span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  
+  .business1 h2 {
+    margin-bottom: 0;
+  }
+  
+  .business2 {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .business2 h2 {
+    margin-bottom: 0;
+  }
+  
+  .business2:hover {
+    background-color: initial;
+    background-image: linear-gradient(87deg, rgb(100, 116, 255) -15.34%, rgb(128, 120, 253) 21.77%, rgb(136, 119, 188) 83.94%);
+    color: white;
+  }
+  
+  .business2 span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  
+  .noDropdown {
+    pointer-events: none;
+  }
+  
+  .noDropdown a {
+    cursor: default;
+  }
+  
+  .noDropdown .arrow {
+    display: none;
+  }
+  
+  /* Media queries */
+  @media (max-width: 1100px) {
+    .navLinks {
+      display: none;
+    }
+  
+    .navOptions {
+      display: none;
+    }
+  
+    .plusIcon {
+      display: block;
+    }
+  
+    .navbar.scrolled {
+      width: 90%;
+      padding: 0 1rem;
+    }
+  
+    .navbar.expanded {
+      width: 90%;
+      padding: 0 1rem;
+    }
+  
+    .hamburgerMenu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(208, 208, 208, 0.614);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      padding: 2rem;
+      z-index: 999;
+    }
+  
+    .hamburgerMenu a {
+      margin-bottom: 1rem;
+      color: black;
+    }
+  
+    .hamburgerMenu a:hover {
+      color: blue;
+    }
+  
+    .hamburgerMenu .login,
+    .hamburgerMenu .signup {
+      width: 90%;
+    }
+  
+    .hamburgerMenu .login {
+      margin-bottom: 1rem;
+    }
+  
+    .hamburgerMenu .signup {
+      margin-bottom: 2rem;
+    }
+  
+    .navbar.expanded .hamburgerMenu {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .login {
+      display: none;
+    }
+  
+    .signup {
+      display: block;
+    }
+  
+    .hamburgerMenu .login {
+      display: block;
+    }
+  
+    .hamburgerMenu .signup {
+      display: block;
+    }
+  }
+  

@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.imageStripContainer {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .imageStrip {
+    display: flex;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .imageStrip img {
+    width: 150px;
+    height: 100px; /* Adjust height as needed */
+    margin-right: 1rem; /* Adjust spacing as needed */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .imageStrip::after {
+    content: '';
+    display: flex;
+  }
+  
+  .imageStripContainer::before {
+    content: '';
+    display: flex;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .imageStripContainer::before,
+.imageStripContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}

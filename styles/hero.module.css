@@ -1,0 +1,214 @@
+
+@font-face {
+  font-family: 'BaseNeue';
+  src: url('/fonts/base_neue/BaseNeueTrial-Condensed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.outline {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading h1 {
+  font-size: 5em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: 'BaseNeue', 'Segoe UI'; /* Added fallback font */
+  word-spacing: 0;
+}
+
+.heading h3{
+  font-size: 25px;
+  font-weight: normal;
+  color: rgb(92, 91, 91);
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tiles{
+  width: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-height: fit-content;
+  overflow: hidden;
+  height: 450px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid white;
+  border-radius: 5%;
+  
+}
+
+.tiles h3{
+  font-size: 25px;
+}
+
+.tiles h3:nth-child(1){
+  padding-top: 20px;
+}
+.tiles h3:nth-child(3){
+  padding-top: 20px;
+}
+.tiles h3:nth-child(4){
+  padding-top: 20px;
+}
+
+.tiles h3:nth-child(2){
+  padding-top: 0px;
+}
+
+.tiles:nth-child(2){
+  border: 3px solid rgb(100, 116, 255);
+  border-radius: 5%;
+}
+
+.tiles h5{
+  color: rgb(98, 98, 98);
+}
+
+.topElement{
+  display: flex;
+  top: 0;
+  margin-left: 50%;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  background: linear-gradient(115deg, rgb(100, 116, 255) 16.02%, rgb(160, 169, 255) 123.24%);
+  color: white;
+  border-radius: 0px 0px 4px 4px;
+  align-items: center;
+}
+
+.amountCont{
+  display: flex;
+  align-items: center;
+}
+.amount{
+  display: flex;
+  align-items: baseline;
+  /* margin-top: 0; */
+}
+
+
+.rupee{
+  font-size: 40px;
+}
+
+.price{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.Smallrupee{
+  font-size: 30px;
+}
+
+.Smallprice{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.discount{
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin-left: 5%;
+  background-color: rgb(208, 255, 153);
+  color: rgb(0, 96, 0);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+
+.tiles button{
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 30px;
+  border-width: 2px;
+  border-color: rgb(100, 116, 255);
+  background-color: #ffffff;
+}
+
+.special button{
+  background-color: initial;
+  background-image: linear-gradient(87deg, rgb(100, 116, 255) -15.34%, rgb(128, 120, 253) 21.77%, rgb(207, 192, 254) 83.94%);
+  /* transition: background-size 0.2s ease-in 0s; */
+  border: 1px solid white;
+}
+
+.special a{
+  color:#ffffff !important;
+}
+
+.special a:hover{
+  text-decoration: underline;
+
+}
+
+.tiles a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.tiles a:hover{
+  color: rgb(94, 94, 214);
+  text-decoration: underline;
+}
+
+.trial{
+  display: flex;
+  justify-content: center;
+  column-gap: 3px;
+}
+.trial a{
+  color: black;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.bottMargin{
+  margin-bottom: 10px;
+}
+
+.listElements{
+  font-size: 13px;
+}
+
+
+@media screen and (max-width: 700px) {
+  .cards{
+      flex-wrap: wrap;
+      width: 100%;
+  }
+
+  .tiles{
+      width: 80% !important;
+      margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1100px) {
+/* @media (max-width: 1100px), (min-width: 761px) { */
+  .cards{
+      flex-wrap: wrap;
+      width: 100%;
+  }
+
+  .tiles{
+    margin-bottom: 15px;
+    width: 30%;
+  }
+}
